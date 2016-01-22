@@ -31,8 +31,10 @@ class User: NSObject {
     init(dic:JSON){
         super.init()
         screen_name = dic["screen_name"].stringValue
-        header = dic["hearder"].stringValue
+        header = dic["header"].stringValue
         fans_count = dic["fans_count"].numberValue
+        
+
     }
     
     class func users(array:[JSON]) -> NSMutableArray{

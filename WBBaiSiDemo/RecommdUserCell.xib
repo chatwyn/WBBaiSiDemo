@@ -24,7 +24,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vja-AK-CSJ">
                         <rect key="frame" x="70" y="20" width="170" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Uo-mT-wt0">
@@ -72,9 +72,10 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="fansCountLabel" destination="7Uo-mT-wt0" id="FLl-2L-QGV"/>
-                <outlet property="headerImageView" destination="eOc-lJ-1QG" id="fkL-ke-QZA"/>
-                <outlet property="screenNameLabel" destination="vja-AK-CSJ" id="hbJ-9T-s8J"/>
+                <outlet property="attentionBtn" destination="kJu-hf-ggx" id="2O6-nZ-yep"/>
+                <outlet property="fanceLabel" destination="7Uo-mT-wt0" id="F4o-kz-LVC"/>
+                <outlet property="iconView" destination="eOc-lJ-1QG" id="mqY-CN-Itl"/>
+                <outlet property="nameLable" destination="vja-AK-CSJ" id="hSj-43-InU"/>
             </connections>
             <point key="canvasLocation" x="457" y="-135.5"/>
         </tableViewCell>

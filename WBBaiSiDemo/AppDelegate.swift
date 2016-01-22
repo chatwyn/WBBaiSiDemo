@@ -22,6 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
         
+        // 显示引导页
+        GuideView.show()
+        
         return true
     }
     

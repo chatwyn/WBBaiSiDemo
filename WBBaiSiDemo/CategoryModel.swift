@@ -18,7 +18,7 @@ class CategoryModel: NSObject {
     //名字
     var name:String?
     /**  用户数据  */
-    var users = []
+    var users:[User] = []
     
     init(dic:JSON){
         super.init()
@@ -26,7 +26,7 @@ class CategoryModel: NSObject {
         id = dic["id"].numberValue
         count = dic["count"].numberValue
         name = dic["name"].stringValue
-    
+        
     }
     
     class func categorys(array:[JSON]) -> NSMutableArray{

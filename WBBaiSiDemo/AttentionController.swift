@@ -19,6 +19,10 @@ class AttentionController: UIViewController {
         view.backgroundColor = WBBgColor
     }
     
+    @IBAction func login() {
+        presentViewController(LoginController.init(), animated: true, completion: nil)
+    }
+    
     func pushToRecommend() {
         navigationController?.pushViewController(RecommendController.init(), animated: true)
     }

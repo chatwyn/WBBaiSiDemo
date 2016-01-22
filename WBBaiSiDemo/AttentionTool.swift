@@ -26,8 +26,7 @@ class AttentionTool {
         
         HTTPTool.getData("http://api.budejie.com/api/api_open.php?a=list&c=subscribe&category_id=\(categoryId)") { obj -> Void in
             
-            print(obj)
-//            successfulBlock(obj: CategoryModel.categorys(obj["list"].array!) as AnyObject)
+            successfulBlock(obj: User.users(obj["list"].array!) as AnyObject)
         }
     }
 }
