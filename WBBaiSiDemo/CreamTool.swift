@@ -10,14 +10,38 @@ import UIKit
 
 class CreamTool {
     
-    // 获得左侧的标签列表
-    class func getCategory(successfulBlock:((obj:AnyObject)->())){
-        
-        HTTPTool.getData("http://api.budejie.com/api/api_open.php?a=tag_recommend&c=topic&action=sub") { obj -> Void in
-
-            successfulBlock(obj:RecommendTag.tags(obj.array!)  as AnyObject)
-        }
+    /**
+     获得推荐标签
+     */
+    class func getCategory
+        (parameters:[String: AnyObject]? = nil,
+        failBlock:((obj:AnyObject)->())? = nil,
+        successfulBlock:((obj:AnyObject)->())) {
+            HTTPTool.getData("http://api.budejie.com/api/api_open.php?a=tag_recommend&c=topic&action=sub", failBlock: { (obj) -> Void in
+                    
+                
+                }) { (obj) -> Void in
+                    successfulBlock(obj:RecommendTag.tags(obj.array!)  as AnyObject)
+                    
+            }
+            
     }
-
+    
+    /**
+     获得段子里的内容
+     */
+    class func getTopics
+        (parameters:[String:AnyObject]?,
+        successfulBlock:(obj:AnyObject)->()){
+            
+            HTTPTool.getData("http://api.budejie.com/api/api_open.php",parameters:parameters, failBlock: { (obj) -> Void in
+                
+                }) { (obj) -> Void in
+                    successfulBlock(obj:[WBTopic.topics(obj["list"].array!),obj["info"]["maxtime"].stringValue])
+                    
+            }
+    }
+    
+    
 }
 

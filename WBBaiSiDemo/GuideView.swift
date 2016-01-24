@@ -24,8 +24,7 @@ class GuideView: UIView {
         // 获得沙盒中存储的版本号
         let lastVersion = NSUserDefaults.standardUserDefaults().integerForKey(key)
         
-        print(currentVersion)
-        print(lastVersion)
+
         if currentVersion != lastVersion{
         
             let window = UIApplication.sharedApplication().keyWindow

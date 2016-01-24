@@ -53,7 +53,7 @@ class WBTabBarController: UITabBarController,WBTabBarDelegate {
         
         let newTabBar = WBTabBar.init(frame: tabBar.bounds)
         newTabBar.tabBardelegate = self
-        
+
         setValue(newTabBar, forKey: "tabBar")
     }
     

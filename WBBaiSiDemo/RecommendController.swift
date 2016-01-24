@@ -23,8 +23,7 @@ class RecommendController: UIViewController,UITableViewDelegate,UITableViewDataS
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "推荐关注"
-        
+        title = "推荐关注"  
         //    设置tableView
         setTableView()
         //    获得左侧列表
@@ -101,7 +100,7 @@ class RecommendController: UIViewController,UITableViewDelegate,UITableViewDataS
         
         categoryTableView.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: 0, right: 0)
         userTableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
-        
+
         categoryTableView.registerNib(UINib.init(nibName: NSStringFromClass(CategoryCell).componentsSeparatedByString(".").last!, bundle: nil), forCellReuseIdentifier: NSStringFromClass(CategoryCell).componentsSeparatedByString(".").last!)
         userTableView.registerNib(UINib.init(nibName: NSStringFromClass(RecommdUserCell).componentsSeparatedByString(".").last!, bundle: nil), forCellReuseIdentifier: NSStringFromClass(RecommdUserCell).componentsSeparatedByString(".").last!)
         

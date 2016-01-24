@@ -29,11 +29,17 @@
 		5B31B1801C5231D600824D98 /* RecommendTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B31B17E1C5231D600824D98 /* RecommendTagCell.xib */; };
 		5B31B1841C52348700824D98 /* RecommendTagController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B31B1831C52348700824D98 /* RecommendTagController.swift */; };
 		5B31B1861C52361F00824D98 /* CreamTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B31B1851C52361F00824D98 /* CreamTool.swift */; };
+		5B5A673B1C53D188004B62A8 /* TopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A67391C53D188004B62A8 /* TopicCell.swift */; };
+		5B5A673C1C53D188004B62A8 /* TopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5A673A1C53D188004B62A8 /* TopicCell.xib */; };
+		5B62C5711C551D7100D67708 /* TopicPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62C5701C551D7100D67708 /* TopicPictureView.swift */; };
+		5B62C5731C551D8100D67708 /* TopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B62C5721C551D8100D67708 /* TopicPictureView.xib */; };
 		5BADDC031C524E4B00915EC8 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADDC011C524E4B00915EC8 /* LoginController.swift */; };
 		5BADDC041C524E4B00915EC8 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BADDC021C524E4B00915EC8 /* LoginController.xib */; };
 		5BADDC061C52664900915EC8 /* WBTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADDC051C52664900915EC8 /* WBTextView.swift */; };
 		5BADDC081C526AA600915EC8 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADDC071C526AA600915EC8 /* GuideView.swift */; };
 		5BADDC0A1C526AB400915EC8 /* GuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BADDC091C526AB400915EC8 /* GuideView.xib */; };
+		5BB1C8961C54B31900A777B8 /* TopicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB1C8951C54B31900A777B8 /* TopicController.swift */; };
+		5BD666631C53A09C00592A1E /* WBTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD666621C53A09C00592A1E /* WBTopic.swift */; };
 		5BF3A5E61C4F7314002933FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF3A5E51C4F7314002933FE /* AppDelegate.swift */; };
 		5BF3A5ED1C4F7314002933FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BF3A5EC1C4F7314002933FE /* Assets.xcassets */; };
 		5BF3A5F81C4F8997002933FE /* WBNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF3A5F71C4F8997002933FE /* WBNavigationController.swift */; };
@@ -72,11 +78,17 @@
 		5B31B17E1C5231D600824D98 /* RecommendTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendTagCell.xib; sourceTree = "<group>"; };
 		5B31B1831C52348700824D98 /* RecommendTagController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendTagController.swift; sourceTree = "<group>"; };
 		5B31B1851C52361F00824D98 /* CreamTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreamTool.swift; sourceTree = "<group>"; };
+		5B5A67391C53D188004B62A8 /* TopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicCell.swift; sourceTree = "<group>"; };
+		5B5A673A1C53D188004B62A8 /* TopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopicCell.xib; sourceTree = "<group>"; };
+		5B62C5701C551D7100D67708 /* TopicPictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicPictureView.swift; sourceTree = "<group>"; };
+		5B62C5721C551D8100D67708 /* TopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopicPictureView.xib; sourceTree = "<group>"; };
 		5BADDC011C524E4B00915EC8 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		5BADDC021C524E4B00915EC8 /* LoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
 		5BADDC051C52664900915EC8 /* WBTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTextView.swift; sourceTree = "<group>"; };
 		5BADDC071C526AA600915EC8 /* GuideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
 		5BADDC091C526AB400915EC8 /* GuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuideView.xib; sourceTree = "<group>"; };
+		5BB1C8951C54B31900A777B8 /* TopicController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicController.swift; sourceTree = "<group>"; };
+		5BD666621C53A09C00592A1E /* WBTopic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTopic.swift; sourceTree = "<group>"; };
 		5BF3A5E21C4F7314002933FE /* WBBaiSiDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBBaiSiDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF3A5E51C4F7314002933FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BF3A5EC1C4F7314002933FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -267,6 +279,10 @@
 			children = (
 				5B31B17D1C5231D600824D98 /* RecommendTagCell.swift */,
 				5B31B17E1C5231D600824D98 /* RecommendTagCell.xib */,
+				5B5A67391C53D188004B62A8 /* TopicCell.swift */,
+				5B5A673A1C53D188004B62A8 /* TopicCell.xib */,
+				5B62C5701C551D7100D67708 /* TopicPictureView.swift */,
+				5B62C5721C551D8100D67708 /* TopicPictureView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -275,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				5B31B17B1C5231B800824D98 /* RecommendTag.swift */,
+				5BD666621C53A09C00592A1E /* WBTopic.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -284,6 +301,7 @@
 			children = (
 				5BF3A5FB1C4FD079002933FE /* CreamController.swift */,
 				5B31B1831C52348700824D98 /* RecommendTagController.swift */,
+				5BB1C8951C54B31900A777B8 /* TopicController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -481,6 +499,8 @@
 				5B2581341C50ACEA0095D7BC /* CategoryCell.xib in Resources */,
 				5B25811E1C5096550095D7BC /* SVProgressHUD.bundle in Resources */,
 				5B2581231C50979D0095D7BC /* AttentionController.xib in Resources */,
+				5B62C5731C551D8100D67708 /* TopicPictureView.xib in Resources */,
+				5B5A673C1C53D188004B62A8 /* TopicCell.xib in Resources */,
 				5B2581291C509D130095D7BC /* RecommendController.xib in Resources */,
 				5BF3A5ED1C4F7314002933FE /* Assets.xcassets in Resources */,
 			);
@@ -541,6 +561,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BD666631C53A09C00592A1E /* WBTopic.swift in Sources */,
+				5B62C5711C551D7100D67708 /* TopicPictureView.swift in Sources */,
+				5B5A673B1C53D188004B62A8 /* TopicCell.swift in Sources */,
 				5B2581391C50BF5F0095D7BC /* WBTabBar.swift in Sources */,
 				5BF3A5FA1C4F8C67002933FE /* WBTabBarController.swift in Sources */,
 				5BF3A5E61C4F7314002933FE /* AppDelegate.swift in Sources */,
@@ -552,6 +575,7 @@
 				5BF3A5FC1C4FD079002933FE /* CreamController.swift in Sources */,
 				5B2581281C509D130095D7BC /* RecommendController.swift in Sources */,
 				5BF3A5F81C4F8997002933FE /* WBNavigationController.swift in Sources */,
+				5BB1C8961C54B31900A777B8 /* TopicController.swift in Sources */,
 				5B25811F1C5096550095D7BC /* SVProgressHUD.m in Sources */,
 				5B31B17F1C5231D600824D98 /* RecommendTagCell.swift in Sources */,
 				5BF3A5FE1C4FD09D002933FE /* NewestController.swift in Sources */,

@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class RecommendTagController: UITableViewController {
     
     /**  标签数组  */
@@ -42,9 +43,12 @@ class RecommendTagController: UITableViewController {
     获取数据内容
     */
     func getTags() {
+        SVProgressHUD.show()
+        SVProgressHUD.setDefaultMaskType(.Black)
         CreamTool.getCategory { (obj) -> () in
             self.tags = obj as! [RecommendTag]
             self.tableView.reloadData()
+            SVProgressHUD.dismiss()
         }
     }
 
@@ -53,6 +57,7 @@ class RecommendTagController: UITableViewController {
      */
     func setUpTableview() {
         self.title = "推荐标签";
+        self.tableView.tableFooterView = UIView.init()
         self.tableView.registerNib(UINib.init(nibName: "RecommendTagCell", bundle: nil), forCellReuseIdentifier: "RecommendTagCell")
         self.tableView.rowHeight = 70;
         self.tableView.backgroundColor = WBBgColor;

@@ -14,19 +14,30 @@ class AttentionTool {
     // 获得左侧的标签列表
     class func getCategory(successfulBlock:((obj:AnyObject)->())){
         
-        HTTPTool.getData("http://api.budejie.com/api/api_open.php?a=category&c=subscribe") { obj -> Void in
+        
+        HTTPTool.getData("http://api.budejie.com/api/api_open.php?a=category&c=subscribe", failBlock: { (obj) -> Void in
             
-            successfulBlock(obj: CategoryModel.categorys(obj["list"].array!) as AnyObject)
+            
+            }) { (obj) -> Void in
+                
+                successfulBlock(obj: CategoryModel.categorys(obj["list"].array!) as AnyObject)
+                
         }
+        
+        
     }
     
     // 获得右侧的用户列表
     class func getUsers(page:NSNumber,categoryId:NSNumber,successfulBlock:((obj:AnyObject)->())){
         
-        
-        HTTPTool.getData("http://api.budejie.com/api/api_open.php?a=list&c=subscribe&category_id=\(categoryId)") { obj -> Void in
+        HTTPTool.getData("http://api.budejie.com/api/api_open.php?a=list&c=subscribe&category_id=\(categoryId)", failBlock: { (obj) -> Void in
             
-            successfulBlock(obj: User.users(obj["list"].array!) as AnyObject)
+            
+            }) { (obj) -> Void in
+                successfulBlock(obj: User.users(obj["list"].array!) as AnyObject)
+                
         }
     }
+    
+        
 }

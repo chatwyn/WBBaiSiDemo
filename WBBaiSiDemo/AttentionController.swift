@@ -13,7 +13,7 @@ class AttentionController: UIViewController {
     override func viewDidLoad() {
         
         navigationItem.title = "我的关注"
-        
+
         navigationItem.leftBarButtonItem = Common.itemWithImage(UIImage.init(named:"friendsRecommentIcon")!,highlightImage:UIImage.init(named: "friendsRecommentIcon-click")!, target: self, action: "pushToRecommend")
 
         view.backgroundColor = WBBgColor
