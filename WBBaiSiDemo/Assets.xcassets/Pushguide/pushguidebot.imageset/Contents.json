@@ -2,18 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "pushguidebot.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "pushguidebot.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "pushguidebot@2x.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "pushguidebot@2x.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "pushguidebot@3x.png",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "pushguidebot@3x.png"
     }
   ],
   "info" : {

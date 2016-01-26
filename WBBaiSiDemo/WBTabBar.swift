@@ -8,19 +8,11 @@
 
 import UIKit
 
-protocol WBTabBarDelegate:UITabBarDelegate{
-    
-    
-    func didTouchUp(PlusButton:UIButton)
-    
-}
-
-
 class WBTabBar: UITabBar{
     
     let plusButton = UIButton.init(type: .Custom)
     
-    var tabBardelegate:WBTabBarDelegate?
+
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -37,14 +29,12 @@ class WBTabBar: UITabBar{
         
     }
     
-
+    /**
+     点击加号
+     */
     func presentView(){
-        
-        if let _ = tabBardelegate?.respondsToSelector("didTouchUp(PlusButton:)"){
-            
-            tabBardelegate?.didTouchUp(plusButton)
-
-        }
+        UIApplication.sharedApplication().keyWindow?.rootViewController?.presentViewController(PublishController(), animated: false, completion: nil)
+    
     }
     
     

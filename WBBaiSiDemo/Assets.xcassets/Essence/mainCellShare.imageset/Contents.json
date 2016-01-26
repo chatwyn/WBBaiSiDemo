@@ -2,13 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "mainCellShare.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "mainCellShare.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "mainCellShare@2x.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "mainCellShare@2x.png"
     },
     {
       "idiom" : "universal",

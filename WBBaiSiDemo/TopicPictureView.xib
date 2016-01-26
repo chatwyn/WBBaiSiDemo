@@ -11,8 +11,18 @@
             <rect key="frame" x="0.0" y="0.0" width="422" height="278"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1tF-t6-MOJ" userLabel="图片">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="WxE-hi-SL0">
+                    <rect key="frame" x="0.0" y="20" width="422" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="cW2-Iz-Ibb"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1tF-t6-MOJ" userLabel="图片">
                     <rect key="frame" x="0.0" y="0.0" width="422" height="278"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="eZd-Qh-cpc" appends="YES" id="mKP-sE-2eK"/>
+                    </connections>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-gif" translatesAutoresizingMaskIntoConstraints="NO" id="stE-86-TGf" userLabel="GIF标识">
                     <rect key="frame" x="0.0" y="0.0" width="31" height="31"/>
@@ -21,7 +31,7 @@
                         <constraint firstAttribute="width" constant="31" id="KGX-vX-zEl"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6NL-if-JiD">
+                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6NL-if-JiD">
                     <rect key="frame" x="0.0" y="235" width="422" height="43"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="43" id="AVb-4e-TG1"/>
@@ -34,31 +44,51 @@
                         <action selector="seeBigImage" destination="Pzj-2j-fVF" eventType="touchUpInside" id="873-cF-JQg"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MT7-If-zAs" customClass="DALabeledCircularProgressView">
+                    <rect key="frame" x="161" y="89" width="100" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="JRU-be-Lwn"/>
+                        <constraint firstAttribute="height" constant="100" id="tcv-13-zIe"/>
+                    </constraints>
+                </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="1tF-t6-MOJ" secondAttribute="trailing" id="9yl-gQ-yfx"/>
                 <constraint firstItem="6NL-if-JiD" firstAttribute="leading" secondItem="Pzj-2j-fVF" secondAttribute="leading" id="D0l-uJ-nVX"/>
+                <constraint firstItem="MT7-If-zAs" firstAttribute="centerX" secondItem="Pzj-2j-fVF" secondAttribute="centerX" id="Dyi-Va-fT6"/>
+                <constraint firstItem="WxE-hi-SL0" firstAttribute="leading" secondItem="Pzj-2j-fVF" secondAttribute="leading" id="Hso-bS-Z7w"/>
+                <constraint firstItem="MT7-If-zAs" firstAttribute="centerY" secondItem="Pzj-2j-fVF" secondAttribute="centerY" id="IZS-4j-fc8"/>
                 <constraint firstItem="1tF-t6-MOJ" firstAttribute="top" secondItem="Pzj-2j-fVF" secondAttribute="top" id="SwJ-lj-uJn"/>
                 <constraint firstItem="1tF-t6-MOJ" firstAttribute="leading" secondItem="Pzj-2j-fVF" secondAttribute="leading" id="VOU-cQ-5Sy"/>
                 <constraint firstItem="stE-86-TGf" firstAttribute="leading" secondItem="Pzj-2j-fVF" secondAttribute="leading" id="YHE-hH-sey"/>
+                <constraint firstItem="WxE-hi-SL0" firstAttribute="top" secondItem="Pzj-2j-fVF" secondAttribute="top" constant="20" id="ZFE-p7-8V1"/>
                 <constraint firstAttribute="trailing" secondItem="6NL-if-JiD" secondAttribute="trailing" id="coT-6u-cTk"/>
                 <constraint firstAttribute="bottom" secondItem="6NL-if-JiD" secondAttribute="bottom" id="fSt-kG-C2E"/>
                 <constraint firstAttribute="bottom" secondItem="1tF-t6-MOJ" secondAttribute="bottom" id="sEH-1f-TRa"/>
                 <constraint firstItem="stE-86-TGf" firstAttribute="top" secondItem="Pzj-2j-fVF" secondAttribute="top" id="tDi-N9-cd4"/>
+                <constraint firstAttribute="trailing" secondItem="WxE-hi-SL0" secondAttribute="trailing" id="uOF-8o-VvL"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="gifMark" destination="stE-86-TGf" id="dk9-fp-v4t"/>
                 <outlet property="imageView" destination="1tF-t6-MOJ" id="haC-ST-Oij"/>
+                <outlet property="progressView" destination="MT7-If-zAs" id="1D6-hz-TKW"/>
                 <outlet property="seeBigBtn" destination="6NL-if-JiD" id="LMI-Hc-407"/>
             </connections>
-            <point key="canvasLocation" x="589" y="317"/>
+            <point key="canvasLocation" x="647" y="317"/>
         </view>
+        <tapGestureRecognizer id="eZd-Qh-cpc">
+            <connections>
+                <action selector="seeBigImage" destination="Pzj-2j-fVF" id="LxN-my-P3K"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="common-gif" width="31" height="31"/>
+        <image name="imageBackground" width="75" height="15"/>
         <image name="see-big-picture" width="19" height="19"/>
         <image name="see-big-picture-background" width="285" height="43"/>
     </resources>

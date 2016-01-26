@@ -2,18 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "cellFollowDisableIcon.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "cellFollowDisableIcon.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "cellFollowDisableIcon@2x.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "cellFollowDisableIcon@2x.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "cellFollowDisableIcon@3x.png",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "cellFollowDisableIcon@3x.png"
     }
   ],
   "info" : {

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PictureController" customModule="WBBaiSiDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="scrollView" destination="1r8-0w-prd" id="b3M-Cr-GYh"/>
+                <outlet property="view" destination="Arc-6i-uOp" id="Ako-OZ-6qw"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Arc-6i-uOp">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1r8-0w-prd">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3j-Pa-3cQ" userLabel="返回">
+                    <rect key="frame" x="15" y="40" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="5Yq-6h-2cs"/>
+                        <constraint firstAttribute="height" constant="35" id="vdH-Ii-l72"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="show_image_back_icon">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="backBtn:" destination="-1" eventType="touchUpInside" id="u9R-Tk-SjE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcb-BJ-Mbw" userLabel="转发">
+                    <rect key="frame" x="425" y="555" width="70" height="25"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="0.5" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="LxK-MW-bVc"/>
+                        <constraint firstAttribute="width" constant="70" id="et9-KW-PBe"/>
+                    </constraints>
+                    <state key="normal" title="转发">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epK-FV-hee">
+                    <rect key="frame" x="510" y="555" width="70" height="25"/>
+                    <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="0.5" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="J8V-oG-4xZ"/>
+                        <constraint firstAttribute="height" constant="25" id="bjG-N0-L6P"/>
+                    </constraints>
+                    <state key="normal" title="保存">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="saveImage" destination="-1" eventType="touchUpInside" id="Z5L-vd-ywj"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="1r8-0w-prd" firstAttribute="leading" secondItem="Arc-6i-uOp" secondAttribute="leading" id="5P1-D0-MuD"/>
+                <constraint firstItem="t3j-Pa-3cQ" firstAttribute="leading" secondItem="Arc-6i-uOp" secondAttribute="leading" constant="15" id="5iF-cg-42e"/>
+                <constraint firstAttribute="bottom" secondItem="lcb-BJ-Mbw" secondAttribute="bottom" constant="20" id="7NU-si-cZq"/>
+                <constraint firstAttribute="trailing" secondItem="epK-FV-hee" secondAttribute="trailing" constant="20" id="FZ7-yf-Yw4"/>
+                <constraint firstAttribute="bottom" secondItem="epK-FV-hee" secondAttribute="bottom" constant="20" id="JWD-VH-jBp"/>
+                <constraint firstAttribute="bottom" secondItem="1r8-0w-prd" secondAttribute="bottom" id="YVU-F3-GKP"/>
+                <constraint firstItem="1r8-0w-prd" firstAttribute="top" secondItem="Arc-6i-uOp" secondAttribute="top" id="dM2-D0-ixz"/>
+                <constraint firstAttribute="trailing" secondItem="1r8-0w-prd" secondAttribute="trailing" id="kxx-pn-8Mh"/>
+                <constraint firstItem="t3j-Pa-3cQ" firstAttribute="top" secondItem="Arc-6i-uOp" secondAttribute="top" constant="40" id="m6A-qw-8Kc"/>
+                <constraint firstItem="epK-FV-hee" firstAttribute="leading" secondItem="lcb-BJ-Mbw" secondAttribute="trailing" constant="15" id="wii-ku-0vI"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="show_image_back_icon" width="35" height="35"/>
+    </resources>
+</document>

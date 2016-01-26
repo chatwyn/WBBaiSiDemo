@@ -20,6 +20,10 @@ let cellBottomBtnH:CGFloat = 44
 let cellPictureMaxImageH:CGFloat = 1000
 // 超过最大高度时候 设置的高度
 let cellPictureModifiedH:CGFloat = 250
+// 屏幕宽度
+let screenW = UIScreen.mainScreen().bounds.width
+// 屏幕高度
+let screenH = UIScreen.mainScreen().bounds.height
 
 extension UIView{
     var x:CGFloat{
@@ -45,7 +49,7 @@ extension UIView{
             return self.frame.midX
         }
         set{
-            self.frame.origin.x = newValue - self.frame.size.width
+            self.frame.origin.x = newValue - self.frame.size.width * 0.5
         }
     }
     
@@ -54,7 +58,7 @@ extension UIView{
             return self.frame.midY
         }
         set{
-            self.frame.origin.y = newValue - self.frame.size.height
+            self.frame.origin.y = newValue - self.frame.size.height * 0.5
         }
     }
     

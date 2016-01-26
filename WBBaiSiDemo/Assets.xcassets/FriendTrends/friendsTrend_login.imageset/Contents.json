@@ -2,13 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "friendsTrend_login.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "friendsTrend_login.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "friendsTrend_login@2x.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "friendsTrend_login@2x.png"
     },
     {
       "idiom" : "universal",

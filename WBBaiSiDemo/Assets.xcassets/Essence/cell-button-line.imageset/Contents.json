@@ -2,13 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "cell-button-line.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "cell-button-line.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "cell-button-line@2x.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "cell-button-line@2x.png"
     },
     {
       "idiom" : "universal",

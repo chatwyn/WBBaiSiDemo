@@ -10,5 +10,6 @@
 #define WBBaiSiDemo_Bridging_Header_h
 
 #import "SVProgressHUD.h"
+#import "DALabeledCircularProgressView.h"
 
 #endif /* WBBaiSiDemo_Bridging_Header_h */

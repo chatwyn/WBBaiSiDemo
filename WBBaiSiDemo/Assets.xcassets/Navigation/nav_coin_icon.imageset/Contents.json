@@ -2,18 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "nav_coin_icon.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "nav_coin_icon.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "nav_coin_icon@2x.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "nav_coin_icon@2x.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "nav_coin_icon@3x.png",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "nav_coin_icon@3x.png"
     }
   ],
   "info" : {

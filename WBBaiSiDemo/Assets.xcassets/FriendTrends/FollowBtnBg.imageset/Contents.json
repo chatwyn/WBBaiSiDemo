@@ -2,13 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "FollowBtnBg.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "FollowBtnBg.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "FollowBtnBg@2x.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "FollowBtnBg@2x.png"
     },
     {
       "idiom" : "universal",

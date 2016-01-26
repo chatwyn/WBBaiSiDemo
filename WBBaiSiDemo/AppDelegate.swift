@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // 显示引导页
         GuideView.show()
-        
+
         return true
     }
     

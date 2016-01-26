@@ -22,7 +22,7 @@ class TopicCell: UITableViewCell {
     @IBOutlet weak var text_label: UILabel!
     
     /**  中间的图片  */
-    var pictureView = TopicPictureView.pictureView()
+    let pictureView = TopicPictureView.pictureView()
     
     
     /**  Topic  */

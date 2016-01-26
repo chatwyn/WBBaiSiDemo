@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WBTabBarController: UITabBarController,WBTabBarDelegate {
+class WBTabBarController: UITabBarController {
     
     override class func initialize(){
         
@@ -32,7 +32,7 @@ class WBTabBarController: UITabBarController,WBTabBarDelegate {
     
     // MARK: - WBTabBar delegate
     func didTouchUp(PlusButton: UIButton) {
-        print(1)
+        print("didTouchUpPlusButton")
     }
 
     // MARK: - private method
@@ -52,7 +52,6 @@ class WBTabBarController: UITabBarController,WBTabBarDelegate {
     func setTabBar() {
         
         let newTabBar = WBTabBar.init(frame: tabBar.bounds)
-        newTabBar.tabBardelegate = self
 
         setValue(newTabBar, forKey: "tabBar")
     }

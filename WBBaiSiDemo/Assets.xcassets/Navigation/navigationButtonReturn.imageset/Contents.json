@@ -2,18 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "navigationButtonReturn.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "navigationButtonReturn.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "navigationButtonReturn@2x.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "navigationButtonReturn@2x.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "navigationButtonReturn@3x.png",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "navigationButtonReturn@3x.png"
     }
   ],
   "info" : {

@@ -32,6 +32,7 @@ class TopicController: UITableViewController {
         return (self.tableView.tableFooterView as? MJRefreshFooter)!
     }
     
+    // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -79,21 +80,23 @@ class TopicController: UITableViewController {
     func setUpRefrshControl() {
         
         tableView.tableHeaderView = MJRefreshNormalHeader.init(refreshingBlock: { () -> Void in
+            // 结束上啦刷新
             self.footer.endRefreshing()
             
             var params = [String:AnyObject]()
             params["a"] = "list";
             params["c"] = "data";
             params["type"] = self.type
-
+            
             self.params.setDictionary(params);
             
             // 发送请求
             CreamTool.getTopics(params as Dictionary, successfulBlock: { (obj) -> () in
+                // 返回的结果 不是最新一次的结果 不处理
                 if (!self.params.isEqualToDictionary(params)){
                     return
                 }
-
+                
                 self.topics = obj[0] as! [WBTopic]
                 self.tableView.tableFooterView?.hidden = false
                 self.maxtime = obj[1] as! String
@@ -106,7 +109,7 @@ class TopicController: UITableViewController {
         header.beginRefreshing()
         
         tableView.tableFooterView = MJRefreshAutoNormalFooter.init(refreshingBlock: { () -> Void in
-            
+            // 结束下拉刷新
             self.header.endRefreshing()
             var params = [String:AnyObject]()
             params["a"] = "list";
@@ -118,6 +121,7 @@ class TopicController: UITableViewController {
             self.params.setDictionary(params);
             // 发送请求
             CreamTool.getTopics(params, successfulBlock: { (obj) -> () in
+                // 返回的结果 不是最新一次的结果 不处理
                 if (!self.params.isEqualToDictionary(params)){
                     return
                 }

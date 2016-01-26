@@ -9,12 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DACircularProgress.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MJRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods.xcscheme</key>
+		<key>Pods-WBBaiSiDemo.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,12 +37,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>2DEEBFB9489500E3D1B08A47ABEE26A6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>432ECC54282C84882B482CCB4CF227FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>559D2C72E361D34AD057418FDAF5CE12</key>
+		<key>521A984D2FE086BE77AC7DD57BB3CF46</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,12 +57,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C1624F9F762853E1C142840947DC52A4</key>
+		<key>94624EC6C9739263AA965CFE2D8933F5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D4180B12052025B734C18D0066731D3B</key>
+		<key>B9838A3054D449FAA81D280B239C4EF7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

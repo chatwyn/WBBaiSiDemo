@@ -56,6 +56,8 @@ class WBTopic: NSObject {
     var pictureFrame = CGRectZero
     /**  是否大图  */
     var isBigImage = false
+    /**  图片下载进度  */
+    var imageProgress:CGFloat = 0
     
     init(dic:JSON){
         super.init()
@@ -77,12 +79,12 @@ class WBTopic: NSObject {
         self.type = TopicType(rawValue: dic["type"].intValue)!
         
         
-        
         let topic = self.text as NSString
         let textH = topic.boundingRectWithSize(CGSizeMake(UIScreen.mainScreen().bounds.width - 30,CGFloat(MAXFLOAT)), options: .UsesLineFragmentOrigin, attributes: [NSFontAttributeName : UIFont.systemFontOfSize(17)], context: nil).size.height
         // 只有文字时的高度
         self.cellHeight = textH + topicCellTextY + 2 * margin + cellBottomBtnH
         
+        // 当为图片时
         if self.type == .Picture {
             let width = UIScreen.mainScreen().bounds.width - 30
             var height = self.height * width / self.width
@@ -92,7 +94,7 @@ class WBTopic: NSObject {
                 self.isBigImage = true
             }
             self.pictureFrame = CGRect(x: margin, y:pictureY, width: width, height: height)
-            
+            // 加上图片和一个宽度的高度
             self.cellHeight += height + margin
         }
 

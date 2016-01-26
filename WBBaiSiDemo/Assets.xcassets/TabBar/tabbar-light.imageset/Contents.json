@@ -2,13 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "tabbar-light.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "tabbar-light.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "tabbar-light@2x.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "tabbar-light@2x.png"
     },
     {
       "idiom" : "universal",
@@ -18,8 +18,5 @@
   "info" : {
     "version" : 1,
     "author" : "xcode"
-  },
-  "properties" : {
-    "template-rendering-intent" : "original"
   }
 }

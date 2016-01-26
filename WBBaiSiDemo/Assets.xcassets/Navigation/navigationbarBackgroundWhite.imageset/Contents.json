@@ -2,8 +2,8 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "navigationbarBackgroundWhite.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "navigationbarBackgroundWhite.png"
     },
     {
       "idiom" : "universal",
