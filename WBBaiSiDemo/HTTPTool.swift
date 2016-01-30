@@ -15,6 +15,7 @@ public class HTTPTool: NSObject {
     typealias SuccessfulBlock = (obj:JSON)->Void
     typealias FailBlock = (obj:NSError)->Void
     
+
     
     class func getData
         (urlStr:String,

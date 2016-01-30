@@ -12,28 +12,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pushguidetop" translatesAutoresizingMaskIntoConstraints="NO" id="YUL-rH-2PI">
-                    <rect key="frame" x="175" y="143" width="250" height="55"/>
+                    <rect key="frame" x="175" y="142" width="250" height="55"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="250" id="WiR-3h-aIw"/>
                         <constraint firstAttribute="height" constant="55" id="bYV-M3-pnc"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pushguidemid" translatesAutoresizingMaskIntoConstraints="NO" id="wkP-kX-xTC">
-                    <rect key="frame" x="180" y="238" width="240" height="125"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="240" id="aO1-WU-cs7"/>
-                        <constraint firstAttribute="height" constant="125" id="eI6-gF-UgW"/>
-                    </constraints>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pushguidebot" translatesAutoresizingMaskIntoConstraints="NO" id="EY6-3m-Yaw">
-                    <rect key="frame" x="235" y="368" width="130" height="90"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="130" id="7h3-NC-HHM"/>
-                        <constraint firstAttribute="height" constant="90" id="NWL-oR-cDP"/>
-                    </constraints>
-                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jav-ra-HLH">
-                    <rect key="frame" x="235" y="414" width="103" height="44"/>
+                    <rect key="frame" x="235" y="413" width="103" height="44"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="103" id="2hV-w7-CmW"/>
                         <constraint firstAttribute="height" constant="44" id="sQX-6R-x0R"/>
@@ -45,6 +31,20 @@
                         <action selector="hide:" destination="dSR-Vx-Kg3" eventType="touchUpInside" id="tkD-fn-USa"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pushguidebot" translatesAutoresizingMaskIntoConstraints="NO" id="EY6-3m-Yaw">
+                    <rect key="frame" x="235" y="367" width="130" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="130" id="7h3-NC-HHM"/>
+                        <constraint firstAttribute="height" constant="90" id="NWL-oR-cDP"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pushguidemid" translatesAutoresizingMaskIntoConstraints="NO" id="wkP-kX-xTC">
+                    <rect key="frame" x="180" y="237" width="240" height="125"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="aO1-WU-cs7"/>
+                        <constraint firstAttribute="height" constant="125" id="eI6-gF-UgW"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
             <constraints>

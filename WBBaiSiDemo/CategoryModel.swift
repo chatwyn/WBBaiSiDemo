@@ -11,6 +11,7 @@ import SwiftyJSON
 
 class CategoryModel: NSObject {
     
+    private(set) var a = 3
     //ID
     var id:NSNumber?
     //总数
@@ -26,6 +27,7 @@ class CategoryModel: NSObject {
         id = dic["id"].numberValue
         count = dic["count"].numberValue
         name = dic["name"].stringValue
+
         
     }
     
@@ -35,6 +37,7 @@ class CategoryModel: NSObject {
         
         for item in array{
             arrayM.addObject(CategoryModel.init(dic: item))
+            
         }
         
         return arrayM

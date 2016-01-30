@@ -8,6 +8,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PublishController" customModule="WBBaiSiDemo" customModuleProvider="target">
             <connections>
+                <outlet property="containerView" destination="2LO-Yg-Ffi" id="0e3-73-bg0"/>
+                <outlet property="slogsanView" destination="qZ8-As-73e" id="QSN-jP-LxL"/>
                 <outlet property="view" destination="4pA-fB-MTJ" id="ofh-4j-MDt"/>
             </connections>
         </placeholder>

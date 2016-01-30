@@ -46,7 +46,7 @@ class RecommendController: UIViewController,UITableViewDelegate,UITableViewDataS
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         if tableView == categoryTableView{
             let cell = tableView.dequeueReusableCellWithIdentifier(NSStringFromClass(CategoryCell).componentsSeparatedByString(".").last!) as! CategoryCell
-            cell.category = categories[indexPath.row]
+            cell.category = categories[indexPath.row]            
             
             return cell
         }else{

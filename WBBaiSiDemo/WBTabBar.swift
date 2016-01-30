@@ -16,6 +16,7 @@ class WBTabBar: UITabBar{
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+
         
         //添加加号按钮
         plusButton.setBackgroundImage(UIImage(named: "tabBar_publish_icon"), forState: .Normal)
