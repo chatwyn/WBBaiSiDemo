@@ -22,7 +22,7 @@ class CreamController: UIViewController,UIScrollViewDelegate {
     /**  titleView  */
     let titleView = UIView.init()
     /**  标签的id数组  */
-    var contentIds:[TopicType] = [.All,.Video,.Sound,.Picture,.Word]
+    var contentIds:[TopicType] = [.All,.Video,.Picture,.Word,.Sound]
     /**  当前页面  */
     var currentPage:Int{
         return Int(contentView.contentOffset.x / view.frame.size.width)
@@ -39,6 +39,7 @@ class CreamController: UIViewController,UIScrollViewDelegate {
         setUpContentView()
         // 添加titleView
         setUpTitleView()
+        
         
     }
     // MARK: - UIScrollView Delegate
@@ -133,7 +134,7 @@ class CreamController: UIViewController,UIScrollViewDelegate {
         let width = view.frame.width * 0.2
         let height = titleView.frame.height
         
-        let array = ["全部","视频", "声音", "图片", "段子"]
+        let array = ["全部","视频", "图片", "段子", "声音"]
         
         for var i = 0; i < contentCount; i++ {
             

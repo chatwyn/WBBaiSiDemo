@@ -8,7 +8,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginController" customModule="WBBaiSiDemo" customModuleProvider="target">
             <connections>
+                <outlet property="XXbtn" destination="H8o-G6-Er8" id="Fly-MY-189"/>
+                <outlet property="forgetBtn" destination="YYu-s2-NcI" id="3ar-s7-DML"/>
+                <outlet property="letLineWidth" destination="Z44-Ld-e4P" id="mF4-yV-evs"/>
+                <outlet property="loginBtn" destination="ie6-7n-qJI" id="XlR-xB-sTW"/>
+                <outlet property="loginLabel" destination="qnE-hV-Zo4" id="kEw-gO-mvk"/>
                 <outlet property="loginLeftConstraint" destination="Vb6-PE-TEW" id="028-MK-XW4"/>
+                <outlet property="qqLogin" destination="baY-JV-JfA" id="0Mz-EQ-lZ7"/>
+                <outlet property="registBtn" destination="aDy-aK-k8W" id="yCT-K9-E4g"/>
+                <outlet property="rightLineWidth" destination="Uwi-Wo-CS1" id="PiO-f9-MG4"/>
+                <outlet property="sinaLogin" destination="Ce5-O4-H9O" id="ZFP-us-Twl"/>
+                <outlet property="textlabel" destination="hiB-Br-bpf" id="FDJ-SW-Lwu"/>
+                <outlet property="txLogin" destination="lne-tz-GEd" id="N6a-ta-phJ"/>
                 <outlet property="view" destination="x05-rl-BIJ" id="fcq-hN-YKy"/>
             </connections>
         </placeholder>

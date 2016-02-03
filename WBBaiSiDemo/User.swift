@@ -4,7 +4,7 @@
 //
 //  Created by caowenbo on 16/1/21.
 //  Copyright © 2016年 曹文博. All rights reserved.
-//
+//   推荐关注里的用户
 
 import UIKit
 import SwiftyJSON
@@ -18,23 +18,13 @@ class User: NSObject {
     /**  粉丝  */
     var fans_count:NSNumber?
 
-//    "introduction" : "",
-//    "uid" : "15129106",
-//    "header" : "http:\/\/wimg.spriteapp.cn\/profile\/profile\/20150703135236.jpg",
-//    "gender" : 0,
-//    "is_vip" : false,
-//    "fans_count" : "9188",
-//    "tiezi_count" : 76,
-//    "is_follow" : 0,
-//    "screen_name" : "爱情保卫战"
     
     init(dic:JSON){
         super.init()
         screen_name = dic["screen_name"].stringValue
         header = dic["header"].stringValue
         fans_count = dic["fans_count"].numberValue
-        
-
+    
     }
     
     class func users(array:[JSON]) -> NSMutableArray{

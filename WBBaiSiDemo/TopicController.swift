@@ -4,7 +4,7 @@
 //
 //  Created by caowenbo on 16/1/23.
 //  Copyright © 2016年 曹文博. All rights reserved.
-//
+//  tableview 控制器
 
 import UIKit
 import SwiftyJSON
@@ -58,6 +58,12 @@ class TopicController: UITableViewController {
     }
     
     // MARK: - tableView  delegate
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let commentController = CommentController()
+        commentController.topic = self.topics[indexPath.row]
+        navigationController?.pushViewController(commentController, animated: true)
+    }
+    
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
         return topics[indexPath.row].cellHeight
@@ -84,14 +90,14 @@ class TopicController: UITableViewController {
             self.footer.endRefreshing()
             
             var params = [String:AnyObject]()
-            params["a"] = "list";
+            params["a"] = self.parentViewController!.isKindOfClass(NewestController) ? "newlist" : "list"
             params["c"] = "data";
             params["type"] = self.type
             
             self.params.setDictionary(params);
             
             // 发送请求
-            CreamTool.getTopics(params as Dictionary, successfulBlock: { (obj) -> () in
+            CreamTool.getTopics(params, successfulBlock: { (obj) -> () in
                 // 返回的结果 不是最新一次的结果 不处理
                 if (!self.params.isEqualToDictionary(params)){
                     return
@@ -102,23 +108,26 @@ class TopicController: UITableViewController {
                 self.maxtime = obj[1] as! String
                 self.tableView.reloadData()
                 self.header.endRefreshing()
-                self.header.automaticallyChangeAlpha = true
+                
                 self.page = 0
             })
         })
+        header.automaticallyChangeAlpha = true
         header.beginRefreshing()
         
         tableView.tableFooterView = MJRefreshAutoNormalFooter.init(refreshingBlock: { () -> Void in
             // 结束下拉刷新
             self.header.endRefreshing()
             var params = [String:AnyObject]()
-            params["a"] = "list";
-            params["c"] = "data";
+            params["a"] = self.parentViewController!.isKindOfClass(NewestController) ? "newlist" : "list"
+            params["c"] = "data"
+            
+
             params["type"] = self.type
-            let page = self.page + 1;
+            let page = self.page + 1
             params["page"] = page
             params["maxtime"] = self.maxtime;
-            self.params.setDictionary(params);
+            self.params.setDictionary(params)
             // 发送请求
             CreamTool.getTopics(params, successfulBlock: { (obj) -> () in
                 // 返回的结果 不是最新一次的结果 不处理

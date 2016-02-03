@@ -4,10 +4,10 @@
 //
 //  Created by caowenbo on 16/1/22.
 //  Copyright © 2016年 曹文博. All rights reserved.
-//
+//  推荐关注里的cell
 
 import UIKit
-import SDWebImage
+import Kingfisher
 
 class RecommendTagCell: UITableViewCell {
     
@@ -27,7 +27,7 @@ class RecommendTagCell: UITableViewCell {
             
             self.nameLabel.text = recommendTag?.theme_name
             
-            self.iconView.sd_setImageWithURL(NSURL.init(string: (recommendTag?.image_list)!), placeholderImage: UIImage.init(named: "defaultUserIcon"))
+            self.iconView.kf_setImageWithURL(NSURL.init(string: (recommendTag?.image_list)!)!, placeholderImage: UIImage.init(named: "defaultUserIcon"))
             
             
         }

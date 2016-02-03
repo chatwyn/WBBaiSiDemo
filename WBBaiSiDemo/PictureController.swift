@@ -4,7 +4,7 @@
 //
 //  Created by caowenbo on 16/1/25.
 //  Copyright © 2016年 曹文博. All rights reserved.
-//
+//  图片浏览器
 
 import UIKit
 
@@ -14,7 +14,7 @@ class PictureController: UIViewController {
     let imageView = UIImageView.init()
     /**  topic  */
     var topic:WBTopic?
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,15 +29,13 @@ class PictureController: UIViewController {
             scrollView.contentSize = imageView.size
         }else{
             imageView.size = CGSize(width: pictureW, height: pictureH)
-            imageView.centetY = screenH * 0.5
+            imageView.centerY = screenH * 0.5
         }
 
         
-        imageView.sd_setImageWithURL(NSURL.init(string: topic!.large_image))
-        
+        imageView.kf_setImageWithURL(NSURL.init(string: topic!.large_image)!)
         
     }
-    
     
     // MARK: - event response
     // 返回

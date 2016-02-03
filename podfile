@@ -4,6 +4,6 @@ target 'WBBaiSiDemo' do
     pod 'SwiftyJSON' 
     pod 'Alamofire', '~> 3.0'
     pod 'MJRefresh'
-    pod 'SDWebImage'		
+    pod 'Kingfisher'
     pod 'DACircularProgress'
 end 

@@ -4,10 +4,10 @@
 //
 //  Created by caowenbo on 16/1/24.
 //  Copyright © 2016年 曹文博. All rights reserved.
-//
+//  cell中间的图片
 
 import UIKit
-import SDWebImage
+import Kingfisher
 
 
 class TopicPictureView: UIView {
@@ -29,17 +29,17 @@ class TopicPictureView: UIView {
         return NSBundle.mainBundle().loadNibNamed("TopicPictureView", owner: nil, options: nil)[0] as! TopicPictureView
     }
     
+    // MARK: - event response
     @IBAction func seeBigImage() {
         let pc = PictureController.init()
         pc.topic = self.topic
         UIApplication.sharedApplication().keyWindow?.rootViewController?.presentViewController(pc, animated: true, completion:nil)
-        
-        
     }
     
+    // MARK: - private method
     /**
-     给进度条设置进度
-     */
+    给进度条设置进度
+    */
     func setProgress() {
         self.progressView.hidden = false;
         self.progressView.setProgress(self.topic!.imageProgress, animated: false)
@@ -60,17 +60,39 @@ class TopicPictureView: UIView {
             // 防止因为网速过慢导致 进度条不显示 和 进度条显示上一个的进度
             setProgress()
             
-            self.imageView.sd_setImageWithURL(NSURL.init(string: (topic?.large_image)!), placeholderImage: nil, options: SDWebImageOptions(rawValue: 0),progress: { (receivedSize:Int, expectedSize:Int) -> Void in
-                
-                self.topic!.imageProgress = CGFloat(receivedSize)/CGFloat(expectedSize)
-                
-                self.setProgress()
-                
-                }) { (image:UIImage!, error:NSError!,cacheType:SDImageCacheType! , imageURL:NSURL!) -> Void in
-                    self.progressView.hidden = true
-                    self.imageView.userInteractionEnabled = true
+            imageView.kf_setImageWithURL(NSURL.init(string: (topic?.large_image)!)!,
+                placeholderImage: nil,
+                optionsInfo: nil,
+                progressBlock: { (receivedSize, totalSize) -> () in
+                    self.topic!.imageProgress = CGFloat(receivedSize)/CGFloat(totalSize)
+                    self.setProgress()
+                },
+                completionHandler: { (image, error, cacheType, imageURL) -> () in
+
+                    if image != nil{                       
+                        self.progressView.hidden = true
+                        self.imageView.userInteractionEnabled = true
+                        
+                        if (self.topic?.isBigImage == false) {
+                            return
+                        }
+                        
+                        // 为了让大图的顶部显示到上边
+                        UIGraphicsBeginImageContextWithOptions(self.topic!.pictureFrame.size, true, 0.0);
+                        
+                        let width = self.topic!.pictureFrame.size.width
+                        let height = width * (image?.size.height)! / (image?.size.width)!
+                        image?.drawInRect(CGRect(x: 0, y: 0, width: width, height: height))
+                        
+                        self.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+                        
+                        UIGraphicsEndImageContext();
+                    }
                     
-            }
+                }
+            )
+            
+            
             
             //是否gif动图
             self.gifMark.hidden = !topic!.large_image.hasSuffix("gif")

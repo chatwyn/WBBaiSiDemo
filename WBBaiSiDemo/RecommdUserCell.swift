@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SDWebImage
+import Kingfisher
 
 class RecommdUserCell: UITableViewCell {
 
@@ -21,7 +21,7 @@ class RecommdUserCell: UITableViewCell {
             
             self.nameLable.text = user!.screen_name
             self.fanceLabel.text = "\(user!.fans_count!)人关注"
-            self.iconView.sd_setImageWithURL(NSURL.init(string: user!.header!), placeholderImage: UIImage.init(named: "defaultUserIcon"))
+            self.iconView.kf_setImageWithURL(NSURL.init(string: user!.header!)!, placeholderImage: UIImage.init(named: "defaultUserIcon"))
         }
     }
     

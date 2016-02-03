@@ -4,10 +4,10 @@
 //
 //  Created by caowenbo on 16/1/23.
 //  Copyright © 2016年 曹文博. All rights reserved.
-//
+//  首页的cell
 
 import UIKit
-import SDWebImage
+import Kingfisher
 
 class TopicCell: UITableViewCell {
     
@@ -21,15 +21,35 @@ class TopicCell: UITableViewCell {
     @IBOutlet weak var caiBtn: UIButton!
     @IBOutlet weak var text_label: UILabel!
     
+    @IBOutlet weak var hotCommentView: UIView!
+    @IBOutlet weak var hotCommentLabel: UILabel!
     /**  中间的图片  */
     let pictureView = TopicPictureView.pictureView()
+    /**  音频  */
+    let voiceView = TopicVoiceView.voiceView()
+    /**  视频  */
+    let videoView = TopicVideoView.videoView()
     
+
+    
+    class func topicCell() -> TopicCell{
+        return NSBundle.mainBundle().loadNibNamed("TopicCell", owner: nil, options: nil)[0] as! TopicCell
+    }
+    
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        let bgView = UIImageView.init(image: UIImage.init(named: "mainCellBackground"))
+        backgroundView = bgView
+    }
     
     /**  Topic  */
     var topic:WBTopic?{
         didSet{
             
-            self.iconView.sd_setImageWithURL(NSURL.init(string: (topic?.profile_image)!), placeholderImage: UIImage.init(named: "defaultUserIcon"))
+            self.iconView.kf_setImageWithURL(NSURL.init(string: topic!.profile_image)!, placeholderImage: UIImage.init(named: "defaultUserIcon"))
+            
             
             self.isVipView.hidden = !(topic?.sina_v)!
             self.nameLabel.text = topic?.name
@@ -41,41 +61,69 @@ class TopicCell: UITableViewCell {
             setBtnText(transmitBtn, count: (topic?.repost)!, placeholder: "转发")
             setBtnText(caiBtn, count: (topic?.cai)!, placeholder: "踩")
             
-            
+            // 处理cell中间的图片视频和音频
             if topic?.type == .Picture{
-                self.contentView.addSubview(self.pictureView)
+                if self.pictureView.superview == nil{
+                    self.contentView.addSubview(pictureView)
+                }
+                self.pictureView.hidden = false
                 self.pictureView.topic = topic
                 self.pictureView.frame = topic!.pictureFrame
+                
+                self.voiceView.hidden = true
+                self.videoView.hidden = true
+            }else if topic?.type == .Sound{
+                
+                if self.voiceView.superview == nil{
+                    self.contentView.addSubview(voiceView)
+                }
+                
+                self.voiceView.hidden = false
+                self.voiceView.topic = topic
+                self.voiceView.frame = topic!.pictureFrame
+                
+                self.pictureView.hidden = true
+                self.videoView.hidden = true
+            }else if topic?.type == .Video{
+                
+                if self.videoView.superview == nil{
+                    self.contentView.addSubview(videoView)
+                }
+                
+                self.videoView.hidden = false
+                self.videoView.topic = topic
+                self.videoView.frame = topic!.pictureFrame
+                
+                self.pictureView.hidden = true
+                self.voiceView.hidden = true
             }else{
-                self.pictureView.removeFromSuperview()
+                self.pictureView.hidden = true
+                self.voiceView.hidden = true
+                self.videoView.hidden = true
             }
+            // 最热评论
+            if let comment = topic!.top_cmt{
+                self.hotCommentView.hidden = false
+                let str = NSString.init(format: "%@:%@", comment.user!.username,comment.content) as String
+                self.hotCommentLabel.text = str
+            }else{
+                self.hotCommentView.hidden = true
+            }
+            
             
         }
     }
-    
-    var oldFrame:CGRect?
-    
-    override var frame:CGRect{
-        get {
-            return super.frame
-        }
-        set {
-            //  防止 重复减少
-            if oldFrame == frame {
-                return
-            }
-            // 让cell的上左右 有间距
-            var newFrame = frame
-            newFrame.origin.x = margin / 2
-            newFrame.size.width -= margin
-            newFrame.origin.y += margin
-            newFrame.size.height -= margin
-            
-            oldFrame = newFrame
-            
-            super.frame = newFrame
-        }
+    /**
+     右上角的更多
+     */
+    @IBAction func more() {
+        
+
+        let actionSheet = UIActionSheet.init(title: nil, delegate: nil, cancelButtonTitle: "取消", destructiveButtonTitle: nil, otherButtonTitles: "收藏", "举报")
+        actionSheet.showInView(self.window!)
     }
+    
+    
     /**
      给button设置titie
      
@@ -95,16 +143,35 @@ class TopicCell: UITableViewCell {
         
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        let bgView = UIImageView.init(image: UIImage.init(named: "mainCellBackground"))
-        backgroundView = bgView
-        
-        self.autoresizingMask = .None
-        
-        
+    
+    // MARK: - set frame
+    var oldFrame:CGRect?
+    
+    override var frame:CGRect{
+        get {
+            return super.frame
+        }
+        set {
+            //  防止 重复减少
+            if oldFrame == frame {
+                return
+            }
+            // 让cell的上左右 有间距
+            var newFrame = frame
+            
+            newFrame.origin.x = margin / 2
+            newFrame.size.width -= margin
+            newFrame.origin.y += margin
+            newFrame.size.height -= margin
+            
+            oldFrame = newFrame
+            
+            super.frame = newFrame
+        }
     }
+    
+
+    
     
     
     

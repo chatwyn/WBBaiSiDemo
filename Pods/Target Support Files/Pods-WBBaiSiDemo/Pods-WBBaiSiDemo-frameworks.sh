@@ -86,14 +86,14 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-WBBaiSiDemo/Alamofire.framework"
   install_framework "Pods-WBBaiSiDemo/DACircularProgress.framework"
+  install_framework "Pods-WBBaiSiDemo/Kingfisher.framework"
   install_framework "Pods-WBBaiSiDemo/MJRefresh.framework"
-  install_framework "Pods-WBBaiSiDemo/SDWebImage.framework"
   install_framework "Pods-WBBaiSiDemo/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-WBBaiSiDemo/Alamofire.framework"
   install_framework "Pods-WBBaiSiDemo/DACircularProgress.framework"
+  install_framework "Pods-WBBaiSiDemo/Kingfisher.framework"
   install_framework "Pods-WBBaiSiDemo/MJRefresh.framework"
-  install_framework "Pods-WBBaiSiDemo/SDWebImage.framework"
   install_framework "Pods-WBBaiSiDemo/SwiftyJSON.framework"
 fi

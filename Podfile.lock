@@ -1,26 +1,24 @@
 PODS:
   - Alamofire (3.1.5)
   - DACircularProgress (2.3.1)
+  - Kingfisher (2.0.1)
   - MJRefresh (3.1.0)
-  - SDWebImage (3.7.4):
-    - SDWebImage/Core (= 3.7.4)
-  - SDWebImage/Core (3.7.4)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
   - DACircularProgress
+  - Kingfisher
   - MJRefresh
-  - SDWebImage
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 5f730ba29fd113b7ddd71c1e65d0c630acf5d7b0
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  Kingfisher: 3af2020040453f710507819e6aa5f5721da03d9b
   MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
-  SDWebImage: 247edd7dd80dd6124197b0d6a17846fe9d1df968
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: b0eb67ed5d8730cb4ceac9e853dc45b0d6d6768b
+PODFILE CHECKSUM: 94cdb7411ef672c9aca6d9088b095c71f85164bd
 
 COCOAPODS: 1.0.0.beta.2

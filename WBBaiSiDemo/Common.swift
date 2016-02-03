@@ -15,7 +15,9 @@ let topicCellTextY:CGFloat = 55
 //cell  的间距
 let margin:CGFloat = 10
 //cell 底部按钮的高度
-let cellBottomBtnH:CGFloat = 44
+let cellBottomBtnH:CGFloat = 35
+//cell 最热评论的高度
+let hotCommentTitleH:CGFloat = 20
 // 图片的最大高度
 let cellPictureMaxImageH:CGFloat = 1000
 // 超过最大高度时候 设置的高度
@@ -44,7 +46,7 @@ extension UIView{
         }
     }
     
-    var centetX:CGFloat{
+    var centerX:CGFloat{
         get{
             return self.frame.midX
         }
@@ -53,7 +55,7 @@ extension UIView{
         }
     }
     
-    var centetY:CGFloat{
+    var centerY:CGFloat{
         get{
             return self.frame.midY
         }
@@ -89,7 +91,15 @@ extension UIView{
         }
     }
     
-    
+    func isShowingOnKeyWindow() -> Bool{
+        let window = UIApplication.sharedApplication().keyWindow
+        
+        let newFrame = self.superview!.convertRect(self.frame, toView: window)
+        let intersects = CGRectIntersectsRect(newFrame, (window?.frame)!)
+        
+        return !self.hidden && self.alpha > 0.01 && intersects
+    }
+
 }
 
 class Common:NSObject{

@@ -19,7 +19,7 @@ class PublishController: UIViewController {
         super.viewDidLoad()
         
         
-         self.view.userInteractionEnabled = false
+        self.view.userInteractionEnabled = false
         // Do any additional setup after loading the view.
         self.containerView.transform = CGAffineTransformMakeTranslation(0, -500)
         self.slogsanView.transform = CGAffineTransformMakeTranslation(200, -200)
@@ -29,14 +29,19 @@ class PublishController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
-        UIView.animateWithDuration(0.5, animations: { () -> Void in
+
+        UIView.animateWithDuration(0.5,
+            delay: 0,
+            usingSpringWithDamping: 0.7,
+            initialSpringVelocity: 10,
+            options: .CurveEaseInOut,
+            animations: { () -> Void in
             self.containerView.transform = CGAffineTransformIdentity
             self.slogsanView.transform = CGAffineTransformIdentity
+            
             }) { (bool:Bool) -> Void in
-                 self.view.userInteractionEnabled = true
+                self.view.userInteractionEnabled = true
         }
-        
     }
     
     // MARK: - event response

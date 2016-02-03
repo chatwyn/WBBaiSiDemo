@@ -45,7 +45,7 @@ class WBTabBarController: UITabBarController {
         
         setChildrenController("关注", image: UIImage.init(named: "tabBar_friendTrends_icon")!, selectedImage: UIImage.init(named: "tabBar_friendTrends_click_icon")!,controller: AttentionController.init())
         
-        setChildrenController("我", image: UIImage.init(named: "tabBar_me_icon")!, selectedImage: UIImage.init(named: "tabBar_me_click_icon")!,controller: MeController.init())
+        setChildrenController("我", image: UIImage.init(named: "tabBar_me_icon")!, selectedImage: UIImage.init(named: "tabBar_me_click_icon")!,controller: MeController.init(style:.Grouped))
         
     }
     //设置tabbar

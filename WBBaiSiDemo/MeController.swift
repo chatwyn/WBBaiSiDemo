@@ -8,11 +8,20 @@
 
 import UIKit
 
-class MeController: UIViewController {
+class MeController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setNaviBar()
+        
+        setTableView()
+        
+    }
+    
+    
+    
+    func setNaviBar () {
         // 设置导航栏标题
         navigationItem.title = "我的"
         
@@ -20,25 +29,55 @@ class MeController: UIViewController {
             Common.itemWithImage(UIImage.init(named:"mine-moon-icon")!,highlightImage:UIImage.init(named: "mine-moon-icon-click")!, target: self, action: "tagView")]
         
         view.backgroundColor = WBBgColor
+    }
+    
+    func tagView() {
         
-
+    }
+    
+    func setTableView() {
+        
+        self.tableView.separatorStyle = .None
+        
+        self.tableView.sectionHeaderHeight = 0
+        self.tableView.sectionFooterHeight = margin
+        
+        self.tableView.contentInset = UIEdgeInsetsMake(-15, 0, 0, 0)
+        
+        self.tableView.tableFooterView = MeFooterView.init(frame: CGRectZero, settingHeightAction: { () -> () in
+            //            self.tableView.setn
+        })
+        
+        
         
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // MARK: - tableView Datasource
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 2
     }
     
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
-    */
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        
+        let cell = UITableViewCell.init()
+        cell.selectionStyle = .None
+        
+        
+        if (indexPath.section == 0) {
+            cell.imageView?.image = UIImage.init(named: "mine-moon-icon-nearby")
+            cell.textLabel!.text = "登录/注册"
+        } else if (indexPath.section == 1) {
+            cell.textLabel!.text = "离线下载"
+        }
+        
+        return cell
+        
+        
+    }
     
 }
