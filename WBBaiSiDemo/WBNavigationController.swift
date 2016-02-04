@@ -18,7 +18,7 @@ class WBNavigationController: UINavigationController {
         //设置title的字体
         UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName:UIFont.systemFontOfSize(20)]
 
-        
+
     }
     
     // MARK: - 拦截push的控制器
@@ -54,6 +54,7 @@ class WBNavigationController: UINavigationController {
     }
     
     func back(){
+
         self.popViewControllerAnimated(true)
     }
 }

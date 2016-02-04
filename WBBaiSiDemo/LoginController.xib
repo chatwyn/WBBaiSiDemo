@@ -14,6 +14,7 @@
                 <outlet property="loginBtn" destination="ie6-7n-qJI" id="XlR-xB-sTW"/>
                 <outlet property="loginLabel" destination="qnE-hV-Zo4" id="kEw-gO-mvk"/>
                 <outlet property="loginLeftConstraint" destination="Vb6-PE-TEW" id="028-MK-XW4"/>
+                <outlet property="phoneLabel" destination="2H9-BS-Iz6" id="tLp-dN-lES"/>
                 <outlet property="qqLogin" destination="baY-JV-JfA" id="0Mz-EQ-lZ7"/>
                 <outlet property="registBtn" destination="aDy-aK-k8W" id="yCT-K9-E4g"/>
                 <outlet property="rightLineWidth" destination="Uwi-Wo-CS1" id="PiO-f9-MG4"/>

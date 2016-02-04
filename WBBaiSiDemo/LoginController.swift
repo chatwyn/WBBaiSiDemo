@@ -8,10 +8,11 @@
 
 import UIKit
 
-class LoginController: UIViewController {
+class LoginController: UIViewController,UITextFieldDelegate {
     
     let lineWidth:CGFloat = 103
     
+    @IBOutlet weak var phoneLabel: WBTextView!
     @IBOutlet weak var txLogin: UIButton!
     @IBOutlet weak var sinaLogin: UIButton!
     @IBOutlet weak var XXbtn: UIButton!
@@ -46,8 +47,12 @@ class LoginController: UIViewController {
         self.loginLabel.layer.mask = CALayer.init()
         
         self.loginBtn.layer.mask = loginMaskLayer
+        loginMaskLayer.fillColor = UIColor.whiteColor().CGColor
+        loginMaskLayer.path = UIBezierPath.init(rect: CGRect(x: 0, y: 0, width: 0, height: CGRectGetHeight(self.loginBtn.frame))).CGPath
         
+        self.phoneLabel.delegate = self
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "a", name: UITextFieldTextDidChangeNotification, object: nil)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -115,6 +120,23 @@ class LoginController: UIViewController {
         
         
     }
+
+    // MARK: -  textfiled delegate
+    func a() {
+        let endPath = UIBezierPath.init(rect: CGRect(x: 0, y: 0, width:  CGRectGetWidth(self.loginBtn.frame) / 11 * (CGFloat((self.phoneLabel.text?.characters.count)!)), height: CGRectGetHeight(self.loginBtn.frame))).CGPath
+        
+        
+        let animation = CABasicAnimation.init(keyPath: "path")
+        animation.duration = 0.2
+        animation.beginTime = CACurrentMediaTime()
+        animation.fromValue = loginMaskLayer.path
+        animation.toValue = endPath
+        loginMaskLayer.addAnimation(animation, forKey: "path")
+        
+        loginMaskLayer.path = endPath
+    }
+    
+    
     
     
     // MARK: - event response
