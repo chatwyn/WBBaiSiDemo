@@ -20,12 +20,28 @@ class AttentionController: UIViewController {
     }
     
     @IBAction func login() {
-        presentViewController(LoginController.init(), animated: true, completion: nil)
+        
+        let loginVC = LoginController()
+        
+        loginVC.transitioningDelegate = self
+        
+        presentViewController(loginVC, animated: true, completion: nil)
     }
     
     func pushToRecommend() {
-        navigationController?.pushViewController(RecommendController.init(), animated: true)
+        navigationController?.pushViewController(RecommendController(), animated: true)
     }
         
 
+}
+
+extension AttentionController:UIViewControllerTransitioningDelegate{
+    
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning?{
+        return Animater()
+    }
+    
+
+
+    
 }

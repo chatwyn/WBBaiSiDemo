@@ -10,6 +10,7 @@
 		412694AC8E844EF19D85B8FF /* Pods_WBBaiSiDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9996D048BCBA71AB0BA6D0E /* Pods_WBBaiSiDemo.framework */; };
 		5B0936931C5CFAED0092145B /* TopicVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0936911C5CFAED0092145B /* TopicVideoView.swift */; };
 		5B0936941C5CFAED0092145B /* TopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B0936921C5CFAED0092145B /* TopicVideoView.xib */; };
+		5B22D1CF1C760B6400204885 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B22D1CE1C760B6400204885 /* Animator.swift */; };
 		5B25811D1C5096550095D7BC /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2581161C5096550095D7BC /* SVIndefiniteAnimatedView.m */; };
 		5B25811E1C5096550095D7BC /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5B2581181C5096550095D7BC /* SVProgressHUD.bundle */; };
 		5B25811F1C5096550095D7BC /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B25811A1C5096550095D7BC /* SVProgressHUD.m */; };
@@ -72,6 +73,7 @@
 /* Begin PBXFileReference section */
 		5B0936911C5CFAED0092145B /* TopicVideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicVideoView.swift; sourceTree = "<group>"; };
 		5B0936921C5CFAED0092145B /* TopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopicVideoView.xib; sourceTree = "<group>"; };
+		5B22D1CE1C760B6400204885 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		5B2581131C50049D0095D7BC /* WBBaiSiDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WBBaiSiDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		5B2581151C5096550095D7BC /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
 		5B2581161C5096550095D7BC /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				5B2581271C509D130095D7BC /* RecommendController.xib */,
 				5BADDC011C524E4B00915EC8 /* LoginController.swift */,
 				5BADDC021C524E4B00915EC8 /* LoginController.xib */,
+				5B22D1CE1C760B6400204885 /* Animator.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -592,6 +595,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BD666631C53A09C00592A1E /* WBTopic.swift in Sources */,
+				5B22D1CF1C760B6400204885 /* Animator.swift in Sources */,
 				5B62C5711C551D7100D67708 /* TopicPictureView.swift in Sources */,
 				5B5A673B1C53D188004B62A8 /* TopicCell.swift in Sources */,
 				5B2581391C50BF5F0095D7BC /* WBTabBar.swift in Sources */,
