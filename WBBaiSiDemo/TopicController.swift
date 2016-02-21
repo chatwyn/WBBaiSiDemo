@@ -121,8 +121,6 @@ class TopicController: UITableViewController {
             var params = [String:AnyObject]()
             params["a"] = self.parentViewController!.isKindOfClass(NewestController) ? "newlist" : "list"
             params["c"] = "data"
-            
-
             params["type"] = self.type
             let page = self.page + 1
             params["page"] = page

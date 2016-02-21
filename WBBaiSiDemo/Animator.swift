@@ -33,7 +33,7 @@ class Animater:NSObject,UIViewControllerAnimatedTransitioning {
         
         toView?.frame = fromView!.frame
         
-        let path = UIBezierPath.init(ovalInRect: CGRect(x: toView!.centerX - 20, y: toView!.centerY - 20, width:40 , height: 40))
+        let path = UIBezierPath.init(rect: CGRect(x: toView!.centerX - 20, y: toView!.centerY - 20, width:100 , height: 40))
         
         let maskLayer = CAShapeLayer()
         maskLayer.path = UIBezierPath.init(rect: toView!.frame).CGPath

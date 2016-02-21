@@ -160,4 +160,8 @@ class LoginController: UIViewController,UITextFieldDelegate {
         return .LightContent
     }
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
 }

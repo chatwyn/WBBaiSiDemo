@@ -21,6 +21,11 @@ class WBNavigationController: UINavigationController {
 
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.interactivePopGestureRecognizer?.delegate = nil
+    }
     // MARK: - 拦截push的控制器
     override func pushViewController(viewController: UIViewController, animated: Bool) {
 

@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabBarController = WBTabBarController.init()
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
-        
+
         // 显示引导页
         GuideView.show()
         
