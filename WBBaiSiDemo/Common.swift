@@ -28,6 +28,7 @@ let screenW = UIScreen.mainScreen().bounds.width
 let screenH = UIScreen.mainScreen().bounds.height
 
 extension UIView{
+    
     var x:CGFloat{
         get{
             return self.frame.origin.x
