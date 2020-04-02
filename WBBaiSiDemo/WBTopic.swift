@@ -127,7 +127,6 @@ class WBTopic: NSObject {
             let str = NSString.init(format: "%@:%@", comment.user!.username,comment.content) as String
             let commentH = str.boundingRectWithSize(maxSize, options: .UsesLineFragmentOrigin, attributes: [NSFontAttributeName : UIFont.systemFontOfSize(15)], context: nil).size.height
             self.cellHeight += hotCommentTitleH + commentH + margin
-
         }
     }
     

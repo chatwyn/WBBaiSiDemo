@@ -17,7 +17,7 @@ class WBNavigationController: UINavigationController {
         UINavigationBar.appearance().setBackgroundImage(UIImage.init(named: "navigationbarBackgroundWhite"), forBarMetrics: UIBarMetrics.Default)
         //设置title的字体
         UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName:UIFont.systemFontOfSize(20)]
-        
+
 
     }
     
@@ -25,7 +25,6 @@ class WBNavigationController: UINavigationController {
         super.viewDidLoad()
         
         self.interactivePopGestureRecognizer?.delegate = nil
-
     }
     // MARK: - 拦截push的控制器
     override func pushViewController(viewController: UIViewController, animated: Bool) {

@@ -16,7 +16,7 @@ class AttentionTool {
         
         
         HTTPTool.getData("http://api.budejie.com/api/api_open.php?a=category&c=subscribe", failBlock: { (obj) -> Void in
-            SVProgressHUD.showErrorWithStatus("加载失败")
+            
             
             }) { (obj) -> Void in
                 
