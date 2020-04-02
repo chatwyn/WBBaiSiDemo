@@ -118,7 +118,6 @@ class TopicCell: UITableViewCell {
      */
     @IBAction func more() {
         
-
         let actionSheet = UIActionSheet.init(title: nil, delegate: nil, cancelButtonTitle: "取消", destructiveButtonTitle: nil, otherButtonTitles: "收藏", "举报")
         actionSheet.showInView(self.window!)
     }
